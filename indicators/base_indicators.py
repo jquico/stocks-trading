@@ -1,4 +1,3 @@
-# RSI, MACD, SMA...
 import talib
 import pandas as pd
 
@@ -68,3 +67,38 @@ def calculate_adx(df, period=14):
     """
     df['ADX'] = talib.ADX(df['High'], df['Low'], df['Close'], timeperiod=period)
     return df
+
+def main():
+    # Example usage
+    ticker = 'AAPL'  # Ticker da ação
+    data = pd.read_csv(f"data/stocks/{ticker}_historical_data.csv")
+    
+    # Calculando RSI
+    data = calculate_rsi(data)
+    print("RSI calculado.")
+    
+    # Calculando MACD
+    data = calculate_macd(data)
+    print("MACD calculado.")
+    
+    # Calculando SMA
+    data = calculate_sma(data)
+    print("SMA calculada.")
+    
+    # Calculando EMA
+    data = calculate_ema(data)
+    print("EMA calculada.")
+    
+    # Calculando Stochastic Oscillator
+    data = calculate_stochastic_oscillator(data)
+    print("Oscilador Estocástico calculado.")
+    
+    # Calculando ADX
+    data = calculate_adx(data)
+    print("ADX calculado.")
+    
+    # Display the first few rows to check results
+    print(data.head())
+
+if __name__ == "__main__":
+    main()

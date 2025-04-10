@@ -5,23 +5,36 @@ Este projeto visa criar um trading bot utilizando técnicas avançadas de **Deep
 ## Estrutura do Projeto
 
 ```
-stockes/
-│
-├── env/                   # Ambiente de simulação (OpenAI Gym)
-│   ├── trading_env.py     # Definições do ambiente customizado
-│
-├── models/                # Modelos de trading
-│   ├── ppo_trainer.py     # Código para treinar o modelo PPO
-│   ├── hybrid_model.py    # Integração de DRL com estratégias clássicas
-│   ├── rule_based.py      # Estratégias simples baseadas em regras (SMA, RSI, MACD)
-│
-├── evaluation/            # Avaliação de performance
-│   ├── backtest.py        # Análise de resultados (lucro, drawdown, Sharpe)
-│
-├── run_live.py            # Execução ao vivo com corretora (paper trading)
-├── test.py                # Teste do modelo com dados não vistos
-├── requirements.txt       # Dependências necessárias
-└── README.md              # Documentação do projeto
+├── automate.py
+├── brokers
+│   └── alpaca_connector.py
+├── create.py
+├── data
+│   ├── downloader.py
+│   └── stocks
+├── env
+│   └── trading_env.py
+├── evaluation
+│   ├── backtest.py
+│   └── metrics.py
+├── indicators
+│   ├── advanced_indicators.py
+│   └── base_indicators.py
+├── models
+│   ├── hybrid_model.py
+│   ├── ppo_trainer.py
+│   └── rule_based.py
+├── notebooks
+│   └── explora_features.ipynb
+├── README.md
+├── requirements.txt
+├── run_live.py
+├── test.py
+├── train.py
+└── utils
+    ├── config.py
+    └── visualizer.py
+
 ```
 
 ## Instalação

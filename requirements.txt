@@ -1,0 +1,27 @@
+# Pacotes para aprendizado de máquina e Reinforcement Learning
+stable-baselines3==2.0.0
+torch==1.10.0
+gym==0.21.0
+pandas==1.5.3
+
+# Para baixar dados de ações
+yfinance==0.1.87
+
+# Pacotes de análise e indicadores técnicos
+TA-Lib==0.4.0
+mplfinance==0.12.8b7
+
+# Para conexão com a API Alpaca (ou outro broker)
+alpaca-trade-api==2.3.0
+
+# Para visualizações e gráficos
+matplotlib==3.6.0
+
+# Para criar ambiente virtual e lidar com dependências
+virtualenv==20.16.7
+
+# Outras dependências necessárias para o ambiente
+numpy==1.23.4
+scikit-learn==1.1.2
+scipy==1.9.3
+jupyter==1.0.0
